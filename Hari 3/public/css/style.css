@@ -1,0 +1,205 @@
+body{
+    background-color: black;
+}
+
+.firstNav .navbar-nav{
+    padding-left: -20px;
+}
+
+.firstNav .navbar-nav .nav-item{
+    padding-left: 10px;
+}
+
+.secondNav{
+    background-color: #fafafa;
+    margin: 30px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+}
+
+.secondNav ul{
+    margin-right: -60px;
+}
+
+.secondNav ul li{
+    padding-right: 60px;
+}
+
+.secondNav a:link{
+    text-decoration: none;
+}
+
+.main{
+    margin-top: 30px;
+}
+
+.section{
+    margin-left: 53px;
+    margin-right: 53px;
+}
+
+.jumbotron{
+    background-image: url("/public/img/jumbotron.jpg");
+    color: #ffffff;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.jumbotron-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.listMenu{
+    margin-left: 27px;
+}
+
+.listMenu ul{
+    padding-top: 30px;
+    padding-left: -40px;
+}
+
+.listMenu ul li{
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+.listMenu ul li a{
+    text-decoration: none;
+    color: #494f54 !important;
+}
+
+.listMenu ul li a:hover{
+    text-decoration: none;
+    color: #000000 !important;
+}
+
+.listMenu hr{
+    margin-left: -30px;
+}
+
+.listFeatures{
+    margin-right: -27px;
+}
+
+.listFeatures ul{
+    padding-top: 30px;
+    padding-left: -40px;
+}
+
+.listFeatures ul li{
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+.listFeatures ul li a{
+    text-decoration: none;
+    color: #494f54 !important;
+}
+
+.listFeatures ul li a:hover{
+    text-decoration: none;
+    color: #ffffff !important;
+}
+
+.listFeatures hr{
+    margin-left: -30px;
+}
+
+.socialMedia{
+    margin-top: 20px;
+}
+
+.socialMedia ul{
+    margin-left: -30px;
+}
+
+.socialMedia ul li{
+    display:inline;
+}
+
+.socialMedia img{
+    width: 18%;
+}
+
+.socialMedia h4{
+    margin: auto;
+    padding-top: 20px;
+}
+
+.firstListItem{
+    background-image: url("/public/img/lambat.jpg");
+    color: #ffffff;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.firstListItem-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.secondListItem{
+    background-image: url("/public/img/biasa.jpg");
+    color: #ffffff;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.secondListItem-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.thirdListItem{
+    background-image: url("/public/img/cepat.jpg");
+    color: #ffffff;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.thirdListItem-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    color: #494f54;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
