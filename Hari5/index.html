@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan DOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">  
+            <a class="navbar-brand">Mini Ecommerce</a>
+            <form class="form-inline" id="formItem">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search"  id="keyword" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchItem">Search</button>
+            </form>
+            <button class="btn btn-primary" id="cart"><i class="fas fa-shopping-cart"></i>(0)</button>
+        </nav>
+        <div class="row mt-2" id="listBarang">
+
+        </div>
+    </div>
+    <script>
+        var items = [
+            ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpg'], 
+            ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpg'],
+            ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
+            ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpg']
+        ]
+
+        function printItems(array){
+            
+            var listCard = ""
+            for (var i = 0; i < array.length; i++) {
+                listCard += 
+                        `<div class="card" style="width: 18rem;">
+                            <img src="/public/img/${array[i][4]}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title" id="itemName">${array[i][1]}</h5>
+                                <p class="card-text" id="itemDesc">${array[i][3]}</p>
+                                <p class="card-text">${array[i][2]}</p>
+                                <a href="#" class="btn btn-primary" id="addCart">Tambahkan ke keranjang</a>
+                            </div>
+                        </div>`
+                
+            }
+            return listCard
+        }
+
+        document.getElementById("listBarang").innerHTML = printItems(items)
+
+        var formSearch = document.getElementById("formItem")
+        formSearch.addEventListener("submit", function (evt){
+            evt.preventDefault()
+            var keyword = document.getElementById("keyword").value
+            
+            var filteredItems = filtering(keyword)
+            document.getElementById("listBarang").innerHTML = printItems(filteredItems)
+
+
+        })
+
+        function filtering(string) {
+            var filteredItems = []
+            for (let i = 0; i < items.length; i++) {
+                var itemNameLowerCase = items [i][1].toLowerCase()
+                var stringToLowerCase = string.toLowerCase()
+                if (itemNameLowerCase.includes(stringToLowerCase)) {
+                    filteredItems.push(items[i])
+                }
+            }
+            return filteredItems
+        }
+
+        var count = 0;
+        var countButton = document.getElementById("addCart");
+        var displayCount = document.getElementById("cart");
+        countButton.onclick = function(){
+            count++;
+            displayCount.innerHTML = `<i class="fas fa-shopping-cart"></i> ${count} `;
+        }
+        
+    </script>
+</body>
+</html>
