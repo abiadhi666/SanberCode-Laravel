@@ -18,7 +18,12 @@
             Adults: "Hopper", "Nancy",  "Joyce", "Jonathan", "Murray"
         */
         $kids = array("Mike", "Dustin", "Will", "Lucas", "Max", "Eleven");
+        echo "Kids array <br>";
+        print_r ($kids);
+
         $adults = array("Hopper", "Nancy",  "Joyce", "Jonathan", "Murray");
+        echo "<br> <br> Adults array <br>";
+        print_r ($adults);
         $totalKids = count($kids);
         $totalAdults = count($adults);
         echo "<h3> Soal 2</h3>";
@@ -74,14 +79,15 @@
             Status: "Alive"
             
         */
-
+        $name = array ( "Will Byers", "Mike Wheeler", "Jim Hopper", "Eleven");
         $age = array( "Will Byers" => "12", "Mike Wheeler" => "12", "Jim Hopper" => "43", "Eleven" => "12");
         $aliases = array( "Will Byers" => "Will the Wise", "Mike Wheeler" => "Dungeon Master", "Jim Hopper" => "Chief Hopper", "Eleven" => "El");
         $status = array( "Will Byers" => "Alive", "Mike Wheeler" => "Alive", "Jim Hopper" => "Deceased", "Eleven" => "Alive");
-
-        echo $age["Will Byers"] . "<br>" . $age["Mike Wheeler"] . "<br>" . $age["Jim Hopper"] . "<br>" . $age["Eleven"];
-        echo "<br>" . $aliases["Will Byers"] . "<br>" . $aliases["Mike Wheeler"] . "<br>" . $aliases["Jim Hopper"] . "<br>" . $aliases["Eleven"];
-        echo "<br>" . $status["Will Byers"] . "<br>" . $status["Mike Wheeler"] . "<br>" . $status["Jim Hopper"] . "<br>" . $status["Eleven"];
+        
+        echo "Name: " . $name[0] . "<br>" . "Age: ". $age["Will Byers"] . "<br>" . "Aliases: " . $aliases["Will Byers"] . "<br>" . "Status: " . $status["Will Byers"] . "<br>";
+        echo "<br> Name: " . $name[1] . "<br>" . "Age: ". $age["Mike Wheeler"] . "<br>" . "Aliases: " . $aliases["Mike Wheeler"] . "<br>" . "Status: " . $status["Mike Wheeler"] . "<br>";
+        echo "<br> Name: " . $name[2] . "<br>" . "Age: ". $age["Jim Hopper"] . "<br>" . "Aliases: " . $aliases["Jim Hopper"] . "<br>" . "Status: " . $status["Jim Hopper"] . "<br>";
+        echo "<br> Name: " . $name[3] . "<br>" . "Age: ". $age["Eleven"] . "<br>" . "Aliases: " . $aliases["Eleven"] . "<br>" . "Status: " . $status["Eleven"] . "<br>";
 
         
     ?>
