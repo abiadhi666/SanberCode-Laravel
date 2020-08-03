@@ -1,0 +1,24 @@
+abi_adhi666
+
+3. Users Insert
+INSERT INTO users VALUES ("", "John Doe", "john@doe.com", "john123"), ("", "Jan Doe", "jane@doe.com", "jenita123");
+
+Categories Insert
+INSERT INTO categories VALUES ("", "gadget"), ("", "cloth"), ("", "men"), ("", "women"), ("", "branded");
+
+Items Insert
+INSERT INTO items VALUES ("", "Sumsang b50", "hape keren dari merk sumsang", 4000000, 100, 1), ("", "Uniklooh", "baju keren dari brand ternama", 500000, 50, 2), ("", "IMHO Watch", "jam tangna anak yang jujur banget", 2000000, 10, 1);
+
+NO.4
+A. Mengambil data User
+SELECT NAME, email FROM users;
+
+B. Mengambil data items
+SELECT * FROM items WHERE price > 1000000;
+SELECT * FROM items WHERE NAME LIKE 'uniklo%';
+
+C. Menampilkan data items join dengan kategori
+SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name AS kategori FROM items INNER JOIN categories ON items.category_id=categories.id;
+
+5 Mengubah Data dari Database
+UPDATE items SET price = 2500000 WHERE id = 1;
