@@ -11,15 +11,27 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('home');
+    return view('table/item-tables');
 });
 
-Route::get('/register', function () {
-    return view('register');
+Route::get('/data-tables', function () {
+    return view('table/data-tables');
 });
 
-
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/items', function () {
+    return view('items/index');
 });
