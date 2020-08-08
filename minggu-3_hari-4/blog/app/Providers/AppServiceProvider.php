@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Schema\Builder; // Import Builder where defaultStringLength method is defined
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Builder::defaultStringLength(191);
     }
 
     /**
